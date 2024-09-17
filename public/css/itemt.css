@@ -1,0 +1,411 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout container */
+.layout {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: #f9f9f9; /* Close to white */
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow-y: auto;
+}
+
+/* Toolbar styles */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.search {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.add-button {
+    padding: 9px 13px;
+    background-color: #007bff;
+    color: rgb(235, 232, 232);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Space to the left of the button */
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+/* Item list styles */
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.item.selected {
+    background-color: #e9ecef; /* Light grey background for selected item */
+}
+
+.item .icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1; /* Takes up the remaining space */
+    padding: 10px;
+    display: flex;
+    justify-content: left; /* Align horizontally */
+    align-items: flex-start; /* Align to the top */
+}
+
+/* Modal container styles */
+.modal-container {
+    width: 1210px;
+    height: 899px;
+    background-color: #f9f9f9; /* Background color for modal */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modal content styles */
+.modal-content {
+    margin: 20px;
+    width: 90%;
+}
+
+/* Modal toolbar styles */
+.modal-toolbar {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    margin-bottom: 5px; /* Space below the toolbar */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+/* Buttons inside the toolbar */
+.modal-toolbar .btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px; /* Space between buttons */
+}
+
+.modal-toolbar .primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-toolbar .secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Form styles */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 40%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.icon-select {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 42%;
+    
+}
+
+.icon-selector {
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+    width: 100%; /* Make sure it uses full width of the container */
+    overflow: hidden; /* Prevent overflow */
+    border-radius: 4px;
+    position: relative; 
+}
+.icon-selector .fa-caret-down {
+    margin-left: auto; /* Move icon to the right */
+    font-size: 16px; /* Adjust size as needed */
+    color: #333; /* Adjust color as needed */
+}
+    
+
+.icon-selector i {
+    margin-right: 1px;
+    padding: 7.5px;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.icon-selector span {
+    overflow: hidden; /* Prevent text from overflowing */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-size: 15px;
+}
+
+.icon-list {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-top: 3px;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+    padding: 0; /* Remove padding to match the selector box size */
+}
+
+.icon-list li {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 7.5px;
+    box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+    font-size: 14px;
+   
+}
+
+.icon-list li:hover {
+    border: 1px solid #ccc;
+    background-color: #5e5d5d;
+}
+
+.icon-list i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 19px; /* Adjust size if necessary */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+    
+     
+}
+
+
+/* Webix specific styles */
+.webix_inp_static {
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+    width: 41%;
+}
+
+.webix_icon {
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+/* Prefixed Dropdown menu styles */
+.icon-select .dropdown-menu {
+    position: absolute;
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    display: none;
+    z-index: 1000;
+}
+
+.icon-select .dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.icon-select .dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Container adjustments for properties and parts */
+.properties, .parts {
+    margin-bottom: 20px;
+    padding: 0;
+    width: 41%;
+    border: none;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+/* Flexbox setup for all property and part rows, including headers */
+.property-row, .property-row.header-row, .part-row, .part-row.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+.part-row, .part-row.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Header row styling for properties and parts */
+.property-row.header-row, .part-row.header-row {
+    font-weight: bold;
+    background-color: #f1f1f1;
+    border-bottom: #007bff solid 1px;
+}
+
+/* Configuration for label boxes in both header and content rows */
+.label-box, .value-box, .required-box {
+    flex: 3; /* More space proportionally for label, value, and required boxes */
+    padding: 0 10px; /* Uniform padding for alignment and spacing */
+    text-align: left; /* Left alignment for text in label and value boxes */
+}
+
+.part-row .partname-box, .part-row .required-box {
+    flex: 8; /* More space proportionally for label, value, and required boxes */
+    padding: 0 10px; /* Uniform padding for alignment and spacing */
+    text-align: left; /* Left alignment for text in label and value boxes */
+}
+
+/* Smaller boxes for name and required checkboxes */
+.name-box, .required-box {
+    flex: 1.5; /* Smaller space allocation */
+    padding: 0 10px;
+    display: flex;
+    justify-content: center; /* Center checkboxes horizontally */
+    align-items: center; /* Center checkboxes vertically */
+}
+.part-row .name-box, .part-row .required-box {
+    flex: 2; /* Smaller space allocation */
+    padding: 0 10px;
+    display: flex;
+    justify-content: center; /* Center checkboxes horizontally */
+    align-items: center; /* Center checkboxes vertically */
+}
+
+.delete-box {
+    flex: 0.5; /* Even smaller space for delete action */
+    padding: 0 10px;
+    text-align: right; /* Right alignment for delete button */
+    padding-top: 0px;
+}
+
+/* Input styles ensuring they align under headers perfectly */
+.label-box input, .value-box input, .required-box input,
+.part-row .partname-box input, .part-row .name-box input, .part-row .required-box input {
+    width: 100%;
+    padding: 7px;
+    border: none; /* Remove the border */
+    border-radius: 4px;
+    background-color: #fff; /* Ensure the background is white by default */
+    box-shadow: none; /* No shadow by default */
+
+}
+
+
+
+/* Focus state for inputs */
+.label-box input:focus, .value-box input:focus, 
+.part-row .partname-box input:focus {
+    background-color: #fff; /* Light blue background when the input is focused */
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 0 2px #99ccff; /* Light blue shadow to mimic an outline */
+}
+
+
+.name-box input[type="checkbox"], .required-box input[type="checkbox"],
+.part-row .name-box input[type="checkbox"], .part-row .required-box input[type="checkbox"] {
+    cursor: pointer;
+    transform: scale(1.5); /* Larger checkbox for easy interaction */
+    margin: 0 auto; /* Auto margins to center within the flex container */
+}
+
+/* Delete button styles for consistency and ease of use */
+.delete-box a, .delete-box .remove-btn {
+    color: #c9302c; /* Indicates delete action */
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 13px; /* Visible and clear icon size */
+}
+
+.delete-box a:hover, .delete-box .remove-btn:hover, .delete-box .remove-btn:focus {
+    background-color: #f8d7da; /* Feedback on interaction */
+    border-radius: 4px;
+}
+
+/* Styles for adding new properties or parts */
+.add-property, .add-part {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.add-property:hover, .add-part:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .modal-container {
+        width: 100%;
+        height: auto;
+    }
+}
+

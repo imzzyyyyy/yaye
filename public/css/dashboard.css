@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+  }
+  
+  #dashboardMainContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .dashboard_sidebar {
+    width: 20%;
+    background: #36454f;
+    height: 116vh;
+    padding-top: 80px; /* Adjust for the height of the top navigation */
+  }
+  
+  .dashboard_content_container {
+    width: 80%;
+    background: #f4f6f9;
+    padding-top: 80px; /* Adjust for the height of the top navigation */
+  }
+  
+  h3.dashboard_logo {
+    padding: 10px;
+    color: green;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .dashboard_sidebar_user {
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgb(59, 13, 13);
+  }
+  
+  .dashboard_sidebar_user img {
+    width: 70px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #010701;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+  
+  .dashboard_sidebar_user span {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffff;
+    display: inline-block;
+  }
+  
+  ul.dashboard_menu_lists {
+    padding: 10px;
+    margin-top: 5px;
+  }
+  
+  ul.dashboard_menu_lists li {
+    padding: 18px 20px;
+    font-size: 18px;
+  }
+  
+  ul.dashboard_menu_lists li a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #ffff;
+  }
+  
+  ul.dashboard_menu_lists li a i {
+    font-size: 25px;
+  }
+  
+  ul.dashboard_menu_lists li a.menuActive {
+    color: #fff;
+  }
+  
+  ul.dashboard_menu_lists li:hover {
+    background: #141414;
+    color: #ffff;
+  }
+  
+  .dashboard_topNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment */
+    z-index: 1; /* Ensure the topNav stays above other elements */
+  }
+  
+  #inventorySystemText {
+    margin-left: 10px; /* Add some space between the toggle button and the text */
+    font-size: 18px;
+    color: #848383;
+  }
+  
+  
+  .dashboard_topNav a {
+    color: #848383;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  a#logoutBtn {
+    float: right;
+  }
+  
+  .dashboard_content {
+    padding: 20px 10px 10px 10px;
+  }
+  
+  .dashboard_content_main {
+    background: #fff;
+    min-height: 1050px;
+    height: 100%;
+  }
+  
+  
+  .dropdown-menu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+  }
+  
+  .dropdown-menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: gray;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .dropdown-arrow {
+    float: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .fa-chevron-down {
+    transform: rotate(90deg);
+  }
+  
+  

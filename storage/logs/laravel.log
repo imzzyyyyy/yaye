@@ -1,0 +1,20 @@
+[2024-09-17 16:54:05] local.ERROR: A CreateItemsTable class already exists. {"exception":"[object] (InvalidArgumentException(code: 0): A CreateItemsTable class already exists. at C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\MigrationCreator.php:102)
+[stacktrace]
+#0 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\MigrationCreator.php(59): Illuminate\\Database\\Migrations\\MigrationCreator->ensureMigrationDoesntAlreadyExist('create_items_ta...', 'C:\\\\zclone\\\\yaye\\\\...')
+#1 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand.php(110): Illuminate\\Database\\Migrations\\MigrationCreator->create('create_items_ta...', 'C:\\\\zclone\\\\yaye\\\\...', 'items', true)
+#2 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand.php(97): Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand->writeMigration('create_items_ta...', 'items', true)
+#3 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand->handle()
+#4 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#5 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#6 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#7 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#8 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#9 C:\\zclone\\yaye\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 C:\\zclone\\yaye\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 C:\\zclone\\yaye\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 C:\\zclone\\yaye\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 C:\\zclone\\yaye\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 C:\\zclone\\yaye\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 {main}
+"} 
